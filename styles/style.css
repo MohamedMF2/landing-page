@@ -1,0 +1,140 @@
+:root {
+  --color-soft-blue: #5368df;
+  --color-soft-red: #fa5757;
+  --color-grayish-blue: #9194a1;
+  --color-very-dark-blue: #252b46;
+  --color-off-white: #f7f7f7;
+  --default-padding: 2rem;
+  --default-radius: 0.4rem;
+  --desktop-width: 900px;
+  --tablet-width: 600px;
+  --timing-animation: 0.2s;
+}
+
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  display: inline-block;
+  text-decoration: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  border: 0;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+html {
+  font-size: 62.5%; /* Set base font size to 10px for easier rem unit calculation */
+}
+
+body {
+  font-size: 1.6rem; /* Set default font size to 16px */
+  font-family: "Rubik", sans-serif; /* Set default font family */
+}
+
+/* End CSS Reset */
+/*Global */
+.button {
+  color: var(--color-off-white);
+  padding: 1.2rem 2.4rem;
+  background-color: var(--color-soft-blue);
+  border-radius: var(--default-radius);
+  font-weight: 500;
+  font-size: 1.2rem;
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+}
+.button--secondary {
+  background-color: var(--color-off-white);
+  color: var(--color-soft-blue);
+}
+
+/*End global */
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: var(--desktop-width);
+  margin: 0 auto;
+  padding: var(--default-padding);
+  gap: calc(var(--default-padding) * 4);
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: var(--default-padding);
+}
+
+.logo-content {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.logo-content__logo {
+  width: 4rem;
+  max-width: 100%;
+}
+
+.links {
+  display: flex;
+  align-items: center;
+  gap: var(--default-padding);
+}
+.links__link {
+  color: var(--color-very-dark-blue);
+  transition: color var(--timing-animation) ease-in-out;
+}
+.links__link:hover {
+  color: var(--color-soft-red);
+}
+
+.section {
+  display: flex;
+  align-items: center;
+  gap: calc(var(--default-padding) * 2);
+}
+.section:nth-last-of-type(1) .section__title {
+  font-size: 4.2rem;
+}
+.section__content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: calc(var(--default-padding) / 2);
+}
+.section__description {
+  font-size: 1.2rem;
+  color: var(--color-grayish-blue);
+}
+.section__buttons {
+  display: flex;
+  margin-top: var(--default-padding);
+  gap: var(--default-padding);
+}
+.section__imageContent {
+  flex: 1;
+}
+.section__image {
+  max-width: 100%;
+}/*# sourceMappingURL=style.css.map */
