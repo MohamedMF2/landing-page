@@ -1,0 +1,22 @@
+@forward "base";
+
+.button {
+  color: $color-off-white;
+  padding: 1.2rem 2.4rem;
+  background-color: $color-soft-blue;
+  border-radius: $default-radius;
+  font-weight: 500;
+  font-size: 1.2rem;
+  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  &--secondary {
+    background-color: $color-off-white;
+    color: $color-soft-blue;
+  }
+  &--disabled {
+    background-color: $color-grayish-blue;
+    color: $color-off-white;
+    cursor: not-allowed;
+    user-select: none;
+  }
+}

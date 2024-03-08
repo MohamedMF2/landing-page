@@ -1,17 +1,3 @@
-:root {
-  --color-soft-blue: #5368df;
-  --color-soft-red: #fa5757;
-  --color-grayish-blue: #9194a1;
-  --color-very-dark-blue: #252b46;
-  --color-off-white: #f7f7f7;
-  --default-padding: 2rem;
-  --default-radius: 0.4rem;
-  --desktop-width: 900px;
-  --tablet-width: 600px;
-  --timing-animation: 0.2s;
-}
-
-/* CSS Reset */
 * {
   margin: 0;
   padding: 0;
@@ -51,46 +37,43 @@ body {
   font-family: "Rubik", sans-serif; /* Set default font family */
 }
 
-/* End CSS Reset */
-/*Global */
 .button {
-  color: var(--color-off-white);
+  color: #f7f7f7;
   padding: 1.2rem 2.4rem;
-  background-color: var(--color-soft-blue);
-  border-radius: var(--default-radius);
+  background-color: #5368df;
+  border-radius: 0.4rem;
   font-weight: 500;
   font-size: 1.2rem;
   box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
 .button--secondary {
-  background-color: var(--color-off-white);
-  color: var(--color-soft-blue);
+  background-color: #f7f7f7;
+  color: #5368df;
 }
 .button--disabled {
-  background-color: var(--color-grayish-blue);
-  color: var(--color-off-white);
+  background-color: #9194a1;
+  color: #f7f7f7;
   cursor: not-allowed;
   -webkit-user-select: none;
      -moz-user-select: none;
           user-select: none;
 }
 
-/*End global */
 .container {
   display: flex;
   flex-direction: column;
-  max-width: var(--desktop-width);
+  max-width: 900px;
   margin: 0 auto;
-  padding: var(--default-padding);
-  gap: calc(var(--default-padding) * 4);
+  padding: 2rem;
+  gap: 8rem;
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--default-padding);
+  margin-top: 2rem;
 }
 
 .logo-content {
@@ -108,24 +91,24 @@ body {
 .links {
   display: flex;
   align-items: center;
-  gap: var(--default-padding);
+  gap: 2rem;
 }
 .links__link {
-  color: var(--color-very-dark-blue);
-  transition: color var(--timing-animation) ease-in-out;
+  color: #252b46;
+  transition: color 0.2s ease-in-out;
 }
 .links__link:hover {
-  color: var(--color-soft-red);
+  color: #fa5757;
 }
 
 .section {
   display: flex;
   align-items: center;
-  gap: calc(var(--default-padding) * 2);
+  gap: 4rem;
 }
 .section.section--one--column {
   flex-direction: column;
-  gap: calc(var(--default-padding) / 2);
+  gap: 1rem;
 }
 .section:nth-of-type(1) .section__title {
   font-size: 4.2rem;
@@ -134,11 +117,11 @@ body {
   flex: 1;
   display: flex;
   flex-direction: column;
-  gap: calc(var(--default-padding) / 2);
+  gap: 1rem;
 }
 .section__description {
   font-size: 1.2rem;
-  color: var(--color-grayish-blue);
+  color: #9194a1;
 }
 .section__description .section--one--column {
   max-width: 50rem;
@@ -146,8 +129,8 @@ body {
 }
 .section__buttons {
   display: flex;
-  margin-top: var(--default-padding);
-  gap: var(--default-padding);
+  margin-top: 2rem;
+  gap: 2rem;
 }
 .section__imageContent {
   flex: 1;
@@ -158,9 +141,9 @@ body {
 
 .cards {
   display: flex;
-  gap: var(--default-padding);
+  gap: 2rem;
   width: 100%;
-  margin-top: calc(var(--default-padding) * 2);
+  margin-top: 4rem;
   justify-content: space-between;
 }
 
@@ -172,8 +155,8 @@ body {
   box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
   width: 25rem;
   height: 26rem;
-  gap: var(--default-padding);
-  padding: calc(var(--default-padding) * 2) var(--default-padding) var(--default-padding);
+  gap: 2rem;
+  padding: 4rem 2rem 2rem;
 }
 .card__image {
   width: 6rem;
@@ -194,7 +177,11 @@ body {
   background: url("../images/bg-dots.svg") repeat-x;
   background-size: contain;
   height: 0.3rem;
-  top: calc(var(--default-padding) * -1.4);
-  right: calc(var(--default-padding) * -1);
-  left: calc(var(--default-padding) * -1);
+  top: -2.8rem;
+  right: -2rem;
+  left: -2rem;
+}
+
+.faq {
+  max-width: 50rem;
 }/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,39 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+  
+  a {
+    color: inherit;
+    display: inline-block;
+    text-decoration: none;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    border: 0;
+  }
+  
+  ul,
+  ol {
+    list-style: none;
+  }
+  
+  html {
+    font-size: 62.5%; /* Set base font size to 10px for easier rem unit calculation */
+  }
+  
+  body {
+    font-size: 1.6rem; /* Set default font size to 16px */
+    font-family: "Rubik", sans-serif; /* Set default font family */
+  }
+  

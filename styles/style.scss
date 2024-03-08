@@ -1,94 +1,20 @@
-//css vcariables
-:root {
-  --color-soft-blue: #5368df;
-  --color-soft-red: #fa5757;
-  --color-grayish-blue: #9194a1;
-  --color-very-dark-blue: #252b46;
-  --color-off-white: #f7f7f7;
-  --default-padding: 2rem;
-  --default-radius: 0.4rem;
-  --desktop-width: 900px;
-  --tablet-width: 600px;
-  --timing-animation: 0.2s;
-}
+@forward "base"; //css vcariables
+@use "rest"; //css rest
+@use "global"; //global
 
-/* CSS Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-a {
-  color: inherit;
-  display: inline-block;
-  text-decoration: none;
-}
-
-button {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
-  border: 0;
-}
-
-ul,
-ol {
-  list-style: none;
-}
-
-html {
-  font-size: 62.5%; /* Set base font size to 10px for easier rem unit calculation */
-}
-
-body {
-  font-size: 1.6rem; /* Set default font size to 16px */
-  font-family: "Rubik", sans-serif; /* Set default font family */
-}
-
-/* End CSS Reset */
-
-/*Global */
-.button {
-  color: var(--color-off-white);
-  padding: 1.2rem 2.4rem;
-  background-color: var(--color-soft-blue);
-  border-radius: var(--default-radius);
-  font-weight: 500;
-  font-size: 1.2rem;
-  box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
-  cursor: pointer;
-  &--secondary {
-    background-color: var(--color-off-white);
-    color: var(--color-soft-blue);
-  }
-  &--disabled {
-    background-color: var(--color-grayish-blue);
-    color: var(--color-off-white);
-    cursor: not-allowed;
-    user-select: none;
-  }
-}
-/*End global */
 .container {
   display: flex;
   flex-direction: column;
-  max-width: var(--desktop-width);
+  max-width: $desktop-width;
   margin: 0 auto;
-  padding: var(--default-padding);
-  gap: calc(var(--default-padding) * 4);
+  padding: $default-padding;
+  gap: calc($default-padding * 4);
 }
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-top: var(--default-padding);
+  margin-top: $default-padding;
 }
 
 .logo-content {
@@ -106,14 +32,14 @@ body {
 .links {
   display: flex;
   align-items: center;
-  gap: var(--default-padding);
+  gap: $default-padding;
 
   &__link {
-    color: var(--color-very-dark-blue);
-    transition: color var(--timing-animation) ease-in-out;
+    color: $color-very-dark-blue;
+    transition: color $timing-animation ease-in-out;
 
     &:hover {
-      color: var(--color-soft-red);
+      color: $color-soft-red;
     }
   }
 }
@@ -121,11 +47,11 @@ body {
 .section {
   display: flex;
   align-items: center;
-  gap: calc(var(--default-padding) * 2);
+  gap: calc($default-padding * 2);
 
   &.section--one--column {
     flex-direction: column;
-    gap: calc(var(--default-padding) / 2);
+    gap: calc($default-padding / 2);
   }
   &:nth-of-type(1) &__title {
     font-size: 4.2rem;
@@ -135,12 +61,12 @@ body {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: calc(var(--default-padding) / 2);
+    gap: calc($default-padding / 2);
   }
 
   &__description {
     font-size: 1.2rem;
-    color: var(--color-grayish-blue);
+    color: $color-grayish-blue;
 
     .section--one--column {
       max-width: 50rem;
@@ -149,8 +75,8 @@ body {
   }
   &__buttons {
     display: flex;
-    margin-top: var(--default-padding);
-    gap: var(--default-padding);
+    margin-top: $default-padding;
+    gap: $default-padding;
   }
   &__imageContent {
     flex: 1;
@@ -162,9 +88,9 @@ body {
 
 .cards {
   display: flex;
-  gap: var(--default-padding);
+  gap: $default-padding;
   width: 100%;
-  margin-top: calc(var(--default-padding) * 2);
+  margin-top: calc($default-padding * 2);
   justify-content: space-between;
 }
 .card {
@@ -175,9 +101,8 @@ body {
   box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
   width: 25rem;
   height: 26rem;
-  gap: var(--default-padding);
-  padding: calc(var(--default-padding) * 2) var(--default-padding)
-    var(--default-padding);
+  gap: $default-padding;
+  padding: calc($default-padding * 2) $default-padding $default-padding;
   &__image {
     width: 6rem;
     max-width: 100%;
@@ -197,9 +122,13 @@ body {
       background: url("../images/bg-dots.svg") repeat-x;
       background-size: contain;
       height: 0.3rem;
-      top: calc(var(--default-padding) * -1.4);
-      right: calc(var(--default-padding) * -1);
-      left: calc(var(--default-padding) * -1);
+      top: calc($default-padding * -1.4);
+      right: calc($default-padding * -1);
+      left: calc($default-padding * -1);
     }
   }
+}
+
+.faq {
+  max-width: 50rem;
 }
