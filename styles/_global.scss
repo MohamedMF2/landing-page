@@ -1,13 +1,4 @@
-$color-soft-blue: #5368df;
-$color-soft-red: #fa5757;
-$color-grayish-blue: #9194a1;
-$color-very-dark-blue: #252b46;
-$color-off-white: #f7f7f7;
-$default-padding: 2rem;
-$default-radius: 0.4rem;
-$desktop-width: 900px;
-$tablet-width: 600px;
-$timing-animation: 0.2s;
+@import "base";
 
 .button {
   color: $color-off-white;
@@ -17,6 +8,7 @@ $timing-animation: 0.2s;
   font-weight: 500;
   font-size: 1.2rem;
   box-shadow: 0 0.4rem 0.8rem 0.2rem rgba(0, 0, 0, 0.1);
+  text-align: center;
   cursor: pointer;
   &--secondary {
     background-color: $color-off-white;
