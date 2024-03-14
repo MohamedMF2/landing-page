@@ -1,4 +1,13 @@
-@forward "base"; //css vcariables
+$color-soft-blue: #5368df;
+$color-soft-red: #fa5757;
+$color-grayish-blue: #9194a1;
+$color-very-dark-blue: #252b46;
+$color-off-white: #f7f7f7;
+$default-padding: 2rem;
+$default-radius: 0.4rem;
+$desktop-width: 900px;
+$tablet-width: 600px;
+$timing-animation: 0.2s;
 @use "rest"; //css rest
 @use "global"; //global
 
@@ -131,4 +140,49 @@
 
 .faq {
   max-width: 50rem;
+  margin-top: calc($default-padding * 1.5);
+  border-top: 1px solid $color-grayish-blue;
+  border-bottom: 1px solid $color-grayish-blue;
+  &__row {
+    position: relative;
+    padding: $default-padding 0;
+    &:not(:last-of-type) {
+      border-bottom: 1px solid $color-grayish-blue;
+    }
+  }
+
+  &__arrow {
+    position: absolute;
+    width: 1.2rem;
+    max-width: 100%;
+    right: 0;
+    top: calc($default-padding + 0.6rem);
+    transition: transform $timing-animation ease-in-out;
+  }
+  &__input {
+    display: none;
+    &:checked ~ .faq__answer {
+      opacity: 1;
+      max-height: 30rem;
+      padding-top: $default-padding;
+    }
+    &:checked ~ .faq__arrow {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__question {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  &__answer {
+    font-size: 1.4rem;
+    font-weight: 400;
+    opacity: 0;
+    transition: all $timing-animation ease-in-out;
+    max-height: 0.1rem;
+    overflow: hidden;
+  }
 }
